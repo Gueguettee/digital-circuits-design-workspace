@@ -9,6 +9,7 @@ entity PISO_shift_reg is
 		clk_i : in std_logic;
 		rst_i : in std_logic;
 		shift_i : in std_logic;
+		en_i : in std_logic;
 		data_i : in std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
 		data_o : out std_logic
 	);
@@ -26,23 +27,36 @@ architecture mix of PISO_shift_reg is
 		);
 	end component DFF;
 
-	# TO DO à partir de là
+	component MUX is
+		port (
+			A_i : in std_logic;
+			B_i : in std_logic;
+			S_i : in std_logic;
+			Z_o : out std_logic;
+		);
+	end component MUX;
 
-	signal PISO_data_s : std_logic_vector(DATA_BUS_WIDTH_c downto 0);
+	signal PISO_data_after_mux_s : std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
+	signal PISO_data_before_mux_s : std_logic_vector(DATA_BUS_WIDTH_c downto 0);
 
 	begin 
+		data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
+		PISO_data_before_mux_s(0) <= '1';
 
-		PISO_data_s(0) <= data_i;
-		data_o <= PISO_data_s(DATA_BUS_WIDTH_c downto 1);
-
-		SIPO: for i in DATA_BUS_WIDTH_c downto 1 generate
+		SIPO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
 			begin
-			SIPO_reg: DFF port map(
-				Q_o => PISO_data_s(i),
-				clk_i => clk_i,
-				rst_i => rst_i,
-				D_i => PISO_data_s(i-1)
-			);
+				mux_reg: MUX port map(
+					A_i =>data_i(i),
+					B_i =>PISO_data_before_mux_s(i),
+					S_i => (not shift_i),
+					Z_o => PISO_data_after_mux(i)
+				);
+				PISO_reg: DFF port map(
+					D_i => PISO_data_after_mux(i),
+					rst_i => rst_i,
+					clk_i => (clk_i and en_i),
+					Q_o => PISO_data_before_mux_s(i+1)
+				);
 		end generate;
 
 end architecture;

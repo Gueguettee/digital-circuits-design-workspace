@@ -13,15 +13,15 @@ end entity DFF;
 
 architecture behavioral of DFF is
 	begin
-		process (rst_i, clk_i)
-		begin
-			if rst_i = '1' then
-				Q_o <= '0';
-				Qn_o <= '1';
-			elsif rising_edge(clk_i) then
-				Q_o <= D_i;
-				Qn_o <= not D_i;
-			-- else implicite -> maintien en mémoire
-			end if;
+		process (rst_i, clk_i)	-- to not do all in the same time
+			begin
+				if rst_i = '1' then
+					Q_o <= '0';
+					Qn_o <= '1';
+				elsif rising_edge(clk_i) then
+					Q_o <= D_i;
+					Qn_o <= not D_i;
+				-- else implicite -> maintien en mï¿½moire
+				end if;
 		end process;
 end architecture behavioral;
