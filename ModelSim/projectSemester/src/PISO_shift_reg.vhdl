@@ -38,25 +38,33 @@ architecture mix of PISO_shift_reg is
 
 	signal PISO_data_after_mux_s : std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
 	signal PISO_data_before_mux_s : std_logic_vector(DATA_BUS_WIDTH_c downto 0);
-
-	begin 
-		data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
+	
+	begin
 		PISO_data_before_mux_s(0) <= '1';
 
-		SIPO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
-			begin
-				mux_reg: MUX port map(
-					A_i =>data_i(i),
-					B_i =>PISO_data_before_mux_s(i),
-					S_i => (not shift_i),
-					Z_o => PISO_data_after_mux(i)
-				);
-				PISO_reg: DFF port map(
-					D_i => PISO_data_after_mux(i),
-					rst_i => rst_i,
-					clk_i => (clk_i and en_i),
-					Q_o => PISO_data_before_mux_s(i+1)
-				);
-		end generate;
+		process (rst_i, clk_i)
+			if rst_i = '1' then
+				PISO_data_before_mux_s <= (others => '0');
+				PISO_data_after_mux_s <= (others => '0');
 
+			elsif rising_edge(clk_i) then
+				data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
+				
+				SIPO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
+					begin
+						mux_reg: MUX port map(
+							A_i => data_i(i),
+							B_i => PISO_data_before_mux_s(i),
+							S_i => (not shift_i),
+							Z_o => PISO_data_after_mux_s(i)
+						);
+						PISO_reg: DFF port map(
+							D_i => PISO_data_after_mux_s(i),
+							rst_i => rst_i,
+							clk_i => (clk_i and en_i),
+							Q_o => PISO_data_before_mux_s(i+1)
+						);
+				end generate;
+			end if;
+		end process;
 end architecture;

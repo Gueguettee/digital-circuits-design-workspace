@@ -22,12 +22,16 @@ architecture mix of data_flow is
         enSIPO_o <= en_i;
         enPISO_o <= en_i;
 
-        process(clk_i)
+        process(rst_i, clk_i)
             begin
-                if(nClk_v >= DATA_BUS_WIDTH_c) then
+                if (rst_i = '1') then
                     nClk_v <= 0;
-                    --...
+                    
+                elsif(nClk_v >= DATA_BUS_WIDTH_c) then
+                    shift_o <= 1;
+                    nClk_v <= 0;
                 else
+                    shift_o <= 0;
                     nClk_v <= nClk_v + 1;
                 end if;
         end process;
