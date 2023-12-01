@@ -6,7 +6,7 @@ entity MUX is
 			A_i : in std_logic;
 			B_i : in std_logic;
 			S_i : in std_logic;
-			Z_o : out std_logic
+			Z_o : out std_logic;
 	);
 end entity MUX;
 
