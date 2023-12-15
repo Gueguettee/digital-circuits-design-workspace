@@ -55,6 +55,18 @@ architecture structural of TL is
             enPISO_o: out std_logic
 		);
 	end component;
+
+    component Int_PLL
+        port(-- Clock in ports
+            -- Clock out ports
+            clk_o          : out    std_logic;
+            clk_o_180          : out    std_logic;
+            -- Status and control signals
+            resetn             : in     std_logic;
+            locked            : out    std_logic;
+            clk_i           : in     std_logic
+        );
+    end component;
 	
 	begin
         ser_o <= ser_s;
@@ -91,6 +103,18 @@ architecture structural of TL is
                 enSIPO_o => enSIPO_s,
                 enPISO_o => enPISO_s
             );
+
+        comp4 : Int_PLL
+            port map ( 
+           -- Clock out ports  
+                clk_o => clk_s,
+                --clk_o_180 => clk_s_180,
+            -- Status and control signals                
+                resetn => rst_i,
+                locked => rst_s,
+                -- Clock in ports
+                clk_i => clk_i
+          );
 
 
 		
