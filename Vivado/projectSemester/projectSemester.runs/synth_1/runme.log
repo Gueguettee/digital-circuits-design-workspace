@@ -1,0 +1,222 @@
+
+*** Running vivado
+    with args -log SIPO_shift_reg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SIPO_shift_reg.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source SIPO_shift_reg.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 431.062 ; gain = 163.957
+Command: synth_design -top SIPO_shift_reg -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23328
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 870.539 ; gain = 413.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SIPO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:18]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-638] synthesizing module 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'DFF' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:14]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:55]
+INFO: [Synth 8-256] done synthesizing module 'SIPO_shift_reg' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:18]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 961.980 ; gain = 505.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 961.980 ; gain = 505.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 961.980 ; gain = 505.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 961.980 ; gain = 505.125
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[8]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[7]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[6]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[5]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[4]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[3]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[2]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SIPO_data_s_reg[1]/Q' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:41]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     8|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 24 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.812 ; gain = 715.957
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1174.754 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1278.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8bd0f66c
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1278.586 ; gain = 845.625
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/SIPO_shift_reg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SIPO_shift_reg_utilization_synth.rpt -pb SIPO_shift_reg_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 15 15:18:09 2023...

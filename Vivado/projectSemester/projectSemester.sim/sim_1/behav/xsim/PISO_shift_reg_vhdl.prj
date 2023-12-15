@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../ModelSim/projectSemester/src/DFF.vhdl" \
+"../../../../../../ModelSim/projectSemester/src/MUX.vhdl" \
+"../../../../../../ModelSim/projectSemester/pkg/my_pkg.vhd" \
+"../../../../../../ModelSim/projectSemester/src/PISO_shift_reg.vhdl" \
+
+# Do not sort compile order
+nosort

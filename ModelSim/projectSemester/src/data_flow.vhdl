@@ -31,12 +31,14 @@ begin
         if (rst_i = '1') then
             shift_s <= '0';
             nClk_s <= 0;
-        elsif(nClk_s >= DATA_BUS_WIDTH_c) then
-            shift_s <= '1';
-            nClk_s <= 0;
-        else
-            shift_s <= '0';
-            nClk_s <= nClk_s + 1;
+        elsif rising_edge(clk_i) then
+            if(nClk_s >= DATA_BUS_WIDTH_c) then
+                shift_s <= '1';
+                nClk_s <= 0;
+            else
+                shift_s <= '0';
+                nClk_s <= nClk_s + 1;
+            end if;
         end if;
     end process;
 
