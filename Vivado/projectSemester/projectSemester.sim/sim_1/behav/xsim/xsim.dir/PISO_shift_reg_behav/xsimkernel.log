@@ -2,3 +2,6 @@ Running: xsim.dir/PISO_shift_reg_behav/xsimk.exe -simmode gui -wdb PISO_shift_re
 Design successfully loaded
 Design Loading Memory Usage: 8704 KB (Peak: 8704 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9224 KB (Peak: 9224 KB)
+Simulation CPU Usage: 0 ms
