@@ -57,7 +57,7 @@ architecture mix of PISO_shift_reg is
 				end if;
 		end process;
 
-		SIPO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
+		PISO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
 			begin
 				mux_reg: MUX port map(
 					A_i => data_i(i),
