@@ -20,7 +20,7 @@ entity Int_PLL_clk_wiz is
     clk_o : out STD_LOGIC;
     clk_o_180 : out STD_LOGIC;
     resetn : in STD_LOGIC;
-    locked : out STD_LOGIC;
+    locked : out STD_LOGIC; 
     clk_i : in STD_LOGIC
   );
 end Int_PLL_clk_wiz;

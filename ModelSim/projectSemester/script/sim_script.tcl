@@ -13,7 +13,7 @@ namespace eval sim_script {
 	set COMPILE  	 		yes
 	set SIMULATE 			yes
 	set XILINX_LIB			yes
-	set RUN_TIME 			"4000 ns"
+	set RUN_TIME 			"35000 ns"
 	set SIM_RES				"1 ps"
 
 	# !! if you are using a testbench, the DUT_NAME becomes the testbench entity name !!
@@ -44,6 +44,7 @@ namespace eval sim_script {
 		MUX.vhdl \
 		PISO_shift_reg.vhdl \
 		SIPO_shift_reg.vhdl \
+		data_flow.vhdl \
 		TestBench_TL.vhdl \
 		Int_PLL.vhdl \
 		my_pkg.vhdl \

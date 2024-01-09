@@ -49,12 +49,11 @@ constant DATA_BUS_WIDTH_c : integer := 8;
 		shift_sn <= (not shift_i);
 		clk_and_en_s <= (clk_i and en_i);
 
-		process (rst_i, clk_i)
+		process (rst_i, clk_and_en_s)
 			begin
-				if rst_i = '1' then
-					PISO_data_before_mux_s <= (others => '0');
-					PISO_data_after_mux_s <= (others => '0');
-				elsif rising_edge(clk_i) then
+				if rst_i = '0' then
+					
+				elsif rising_edge(clk_and_en_s) then
 					data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
 				end if;
 		end process;

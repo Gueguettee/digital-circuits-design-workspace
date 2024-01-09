@@ -36,11 +36,11 @@ architecture mix of SIPO_shift_reg is
 	begin
 		clk_and_en_s <= (clk_i and en_i);
 		shift_and_en_s <= (shift_i and en_i);
-		process (rst_i, clk_i)
+		process (rst_i, clk_and_en_s)
 			begin
-				if rst_i = '1' then
-					SIPO_data_s <= (others => '0');
-				elsif rising_edge(clk_i) then
+				if rst_i = '0' then
+					
+				elsif rising_edge(clk_and_en_s) then
 					SIPO_data_s(0) <= data_i;
 				end if;
 		end process;

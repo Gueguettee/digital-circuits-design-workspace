@@ -11,7 +11,8 @@ entity TL is
         sw_i : in std_logic_vector(8-1 downto 0);
         led_o : out std_logic_vector(8-1 downto 0);
         ser_o : out std_logic;
-        ser_i : in std_logic
+        ser_i : in std_logic;
+        clk_pll_o : out std_logic
 	);
 end entity TL;
 
@@ -24,6 +25,7 @@ architecture structural of TL is
     signal shift_s : std_logic;
     signal enSIPO_s : std_logic;
     signal enPISO_s : std_logic;
+    signal ser_s : std_logic;
 	
 	component SIPO_shift_reg is
 		port (
@@ -71,7 +73,8 @@ architecture structural of TL is
     end component;
 	
 	begin
-        ser_o <= ser_i;
+        ser_o <= ser_s;
+        clk_pll_o <= clk_s;
 
         comp1 : SIPO_shift_reg
             port map (
@@ -80,7 +83,7 @@ architecture structural of TL is
                 rst_i => rst_s,
                 shift_i => shift_s,
                 en_i => enSIPO_s,
-                data_i => ser_i,
+                data_i => ser_s,
                 data_o => led_o
             );
             
@@ -92,7 +95,7 @@ architecture structural of TL is
                 shift_i => shift_s,
                 en_i => enPISO_s,
                 data_i => sw_i,
-                data_o => ser_o
+                data_o => ser_s
             );
 
         comp3 : data_flow
