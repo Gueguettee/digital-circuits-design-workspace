@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.my_pkg.all;
+--use work.my_pkg.all;
 
 
 entity PISO_shift_reg is 
@@ -10,12 +10,14 @@ entity PISO_shift_reg is
 		rst_i : in std_logic;
 		shift_i : in std_logic;
 		en_i : in std_logic;
-		data_i : in std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
+		data_i : in std_logic_vector(8-1 downto 0);
 		data_o : out std_logic
 	);
 end entity;
 
 architecture mix of PISO_shift_reg is 
+
+constant DATA_BUS_WIDTH_c : integer := 8;
 
 	component DFF is
 		port (

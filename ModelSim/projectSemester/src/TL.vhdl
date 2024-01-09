@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.my_pkg.all;
+--use work.my_pkg.all;
 
 entity TL is
 	port
@@ -8,20 +8,22 @@ entity TL is
 		en_i : in std_logic;
         rst_i : in std_logic;
         clk_i : in std_logic;
-        sw_i : in std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
-        led_o : out std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
+        sw_i : in std_logic_vector(8-1 downto 0);
+        led_o : out std_logic_vector(8-1 downto 0);
         ser_o : out std_logic;
         ser_i : in std_logic
 	);
 end entity TL;
 
 architecture structural of TL is
+
+    constant DATA_BUS_WIDTH_c : integer := 8;
+
 	signal clk_s : std_logic;
     signal rst_s : std_logic;
     signal shift_s : std_logic;
     signal enSIPO_s : std_logic;
     signal enPISO_s : std_logic;
-    signal ser_s : std_logic;
 	
 	component SIPO_shift_reg is
 		port (
@@ -69,7 +71,7 @@ architecture structural of TL is
     end component;
 	
 	begin
-        ser_o <= ser_s;
+        ser_o <= ser_i;
 
         comp1 : SIPO_shift_reg
             port map (
@@ -78,7 +80,7 @@ architecture structural of TL is
                 rst_i => rst_s,
                 shift_i => shift_s,
                 en_i => enSIPO_s,
-                data_i => ser_s,
+                data_i => ser_i,
                 data_o => led_o
             );
             
@@ -90,7 +92,7 @@ architecture structural of TL is
                 shift_i => shift_s,
                 en_i => enPISO_s,
                 data_i => sw_i,
-                data_o => ser_s
+                data_o => ser_o
             );
 
         comp3 : data_flow

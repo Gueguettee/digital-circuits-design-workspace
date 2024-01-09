@@ -1,7 +1,6 @@
 library ieee;
-
 use ieee.std_logic_1164.all;
-use work.my_pkg.all;
+--use work.my_pkg.all;
 
 entity data_flow is
     port(
@@ -15,6 +14,7 @@ entity data_flow is
 end entity;
 
 architecture mix of data_flow is
+    constant DATA_BUS_WIDTH_c : integer := 8;
 
     signal shift_s : std_logic;
 
