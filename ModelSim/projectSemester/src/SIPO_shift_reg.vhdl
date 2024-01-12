@@ -30,27 +30,20 @@ architecture mix of SIPO_shift_reg is
 
 	signal SIPO_data_s : std_logic_vector(DATA_BUS_WIDTH_c downto 0);
 
-	signal clk_and_en_s : std_logic;
+	signal clk_and_en_ns : std_logic;
 	signal shift_and_en_s : std_logic;
 
 	begin
-		clk_and_en_s <= (clk_i and en_i);
+		clk_and_en_ns <= not (clk_i and en_i);
 		shift_and_en_s <= (shift_i and en_i);
-		process (rst_i, clk_and_en_s)
-			begin
-				if rst_i = '0' then
-					
-				elsif rising_edge(clk_and_en_s) then
-					SIPO_data_s(0) <= data_i;
-				end if;
-		end process;
+		SIPO_data_s(0) <= data_i;
 		
 		SIPO: for i in DATA_BUS_WIDTH_c downto 1 generate
 			begin
 				SIPO_reg: DFF port map(
 					D_i => SIPO_data_s(i-1),
 					rst_i => rst_i,
-					clk_i => clk_and_en_s,
+					clk_i => clk_and_en_ns,
 					Q_o => SIPO_data_s(i)
 				);
 				memory_reg: DFF port map(

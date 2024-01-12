@@ -41,29 +41,21 @@ constant DATA_BUS_WIDTH_c : integer := 8;
 	signal PISO_data_after_mux_s : std_logic_vector(DATA_BUS_WIDTH_c-1 downto 0);
 	signal PISO_data_before_mux_s : std_logic_vector(DATA_BUS_WIDTH_c downto 0);
 	
-	signal shift_sn : std_logic;
+	signal shift_and_en_sn : std_logic;
 	signal clk_and_en_s: std_logic;
 	
 	begin
-		PISO_data_before_mux_s(0) <= '1';
-		shift_sn <= (not shift_i);
+		PISO_data_before_mux_s(0) <= '0';
+		shift_and_en_sn <= (not (shift_i and en_i));
 		clk_and_en_s <= (clk_i and en_i);
-
-		process (rst_i, clk_and_en_s)
-			begin
-				if rst_i = '0' then
-					
-				elsif rising_edge(clk_and_en_s) then
-					data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
-				end if;
-		end process;
+		data_o <= PISO_data_before_mux_s(DATA_BUS_WIDTH_c);
 
 		PISO: for i in DATA_BUS_WIDTH_c-1 downto 0 generate
 			begin
 				mux_reg: MUX port map(
 					A_i => data_i(i),
 					B_i => PISO_data_before_mux_s(i),
-					S_i => shift_sn,
+					S_i => shift_and_en_sn,
 					Z_o => PISO_data_after_mux_s(i)
 				);
 				PISO_reg: DFF port map(

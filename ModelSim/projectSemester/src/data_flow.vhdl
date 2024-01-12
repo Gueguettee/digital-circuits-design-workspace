@@ -33,8 +33,8 @@ architecture mix of data_flow is
             if (rst_i = '0') then
                 shift_s <= '0';
                 nClk_s <= DATA_BUS_WIDTH_c;
-            elsif rising_edge(clk_and_en_s) then
-                if(nClk_s >= DATA_BUS_WIDTH_c) then
+            elsif falling_edge(clk_and_en_s) then
+                if(nClk_s + 1 >= DATA_BUS_WIDTH_c) then
                     shift_s <= '1';
                     nClk_s <= 0;
                 else
