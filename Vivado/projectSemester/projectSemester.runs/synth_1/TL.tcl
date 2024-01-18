@@ -71,7 +71,8 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/gaeta/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-27896-LAPTOP-CJ972H0K/incrSyn
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -114,6 +115,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc
+set_property used_in_implementation false [get_files C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/utils_1/imports/synth_1/SIPO_shift_reg.dcp

@@ -10,9 +10,9 @@ entity TL is
         clk_i : in std_logic;
         sw_i : in std_logic_vector(8-1 downto 0);
         led_o : out std_logic_vector(8-1 downto 0);
-        ser_o : out std_logic;
-        ser_i : in std_logic;
-        clk_pll_o : out std_logic
+        --ser_o : out std_logic;
+        ser_i : in std_logic
+        --clk_pll_o : out std_logic
 	);
 end entity TL;
 
@@ -73,8 +73,8 @@ architecture structural of TL is
     end component;
 	
 	begin
-        ser_o <= ser_s;
-        clk_pll_o <= clk_s;
+        --ser_o <= ser_s;
+        --clk_pll_o <= clk_s;
 
         comp1 : SIPO_shift_reg
             port map (
@@ -115,7 +115,7 @@ architecture structural of TL is
                 clk_o => clk_s,
                 --clk_o_180 => clk_s_180,
             -- Status and control signals                
-                resetn => rst_i,
+                resetn => not rst_i,
                 locked => rst_s,
                 -- Clock in ports
                 clk_i => clk_i
