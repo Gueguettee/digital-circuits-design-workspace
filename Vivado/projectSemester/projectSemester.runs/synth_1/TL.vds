@@ -1,0 +1,299 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Jan 19 10:39:43 2024
+# Process ID: 21044
+# Current directory: C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1
+# Command line: vivado.exe -log TL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TL.tcl
+# Log file: C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/TL.vds
+# Journal file: C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1\vivado.jou
+# Running On: LAPTOP-CJ972H0K, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 17007 MB
+#-----------------------------------------------------------
+source TL.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 430.047 ; gain = 163.477
+Command: read_checkpoint -auto_incremental -incremental C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/utils_1/imports/synth_1/SIPO_shift_reg.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/utils_1/imports/synth_1/SIPO_shift_reg.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top TL -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1287.254 ; gain = 410.066
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TL' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:19]
+INFO: [Synth 8-3491] module 'SIPO_shift_reg' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:6' bound to instance 'comp1' of component 'SIPO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:81]
+INFO: [Synth 8-638] synthesizing module 'SIPO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:18]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-638] synthesizing module 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'DFF' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:14]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'SIPO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:43]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'memory_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:49]
+INFO: [Synth 8-256] done synthesizing module 'SIPO_shift_reg' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:18]
+INFO: [Synth 8-3491] module 'PISO_shift_reg' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:6' bound to instance 'comp2' of component 'PISO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:92]
+INFO: [Synth 8-638] synthesizing module 'PISO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:18]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-638] synthesizing module 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:13]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/MUX.vhdl:4' bound to instance 'mux_reg' of component 'MUX' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:55]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/DFF.vhdl:4' bound to instance 'PISO_reg' of component 'DFF' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:61]
+INFO: [Synth 8-256] done synthesizing module 'PISO_shift_reg' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/PISO_shift_reg.vhdl:18]
+INFO: [Synth 8-3491] module 'data_flow' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:5' bound to instance 'comp3' of component 'data_flow' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:103]
+INFO: [Synth 8-638] synthesizing module 'data_flow' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:16]
+INFO: [Synth 8-3491] module 'cnt' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/cnt.vhdl:5' bound to instance 'comp1' of component 'cnt' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:46]
+INFO: [Synth 8-638] synthesizing module 'cnt' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/cnt.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'cnt' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/cnt.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'data_flow' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:16]
+INFO: [Synth 8-3491] module 'Int_PLL' declared at 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-21044-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:6' bound to instance 'comp4' of component 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:114]
+INFO: [Synth 8-638] synthesizing module 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-21044-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'TL' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:19]
+WARNING: [Synth 8-7129] Port ser_i in module TL is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1378.875 ; gain = 501.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1378.875 ; gain = 501.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1378.875 ; gain = 501.688
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1378.875 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.gen/sources_1/ip/Int_PLL/Int_PLL/Int_PLL_in_context.xdc] for cell 'comp4'
+Finished Parsing XDC File [c:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.gen/sources_1/ip/Int_PLL/Int_PLL/Int_PLL_in_context.xdc] for cell 'comp4'
+Parsing XDC File [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc]
+Finished Parsing XDC File [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TL_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1478.801 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1478.801 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_i. (constraint file  c:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.gen/sources_1/ip/Int_PLL/Int_PLL/Int_PLL_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_i. (constraint file  c:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.gen/sources_1/ip/Int_PLL/Int_PLL/Int_PLL_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for comp4. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_s_reg' in module 'data_flow'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                               00 |                               11
+                 running |                               01 |                               01
+                   shift |                               10 |                               10
+                    idle |                               11 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_s_reg' using encoding 'sequential' in module 'data_flow'
+WARNING: [Synth 8-327] inferring latch for variable 'enSIPO_s_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:41]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 49    
++---Muxes : 
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port ser_i in module TL is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |Int_PLL       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |Int_PLL_bbox |     1|
+|2     |CARRY4       |    12|
+|3     |LUT1         |     2|
+|4     |LUT2         |    68|
+|5     |LUT3         |     2|
+|6     |LUT4         |     3|
+|7     |LUT5         |     7|
+|8     |FDCE         |    58|
+|9     |FDRE         |     1|
+|10    |LD           |     1|
+|11    |IBUF         |    10|
+|12    |OBUF         |     8|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1478.801 ; gain = 501.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1478.801 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1478.801 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instance 
+
+Synth Design complete | Checksum: a93c9cd
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 1478.801 ; gain = 1010.324
+INFO: [Common 17-1381] The checkpoint 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/TL.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TL_utilization_synth.rpt -pb TL_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 19 10:41:12 2024...
