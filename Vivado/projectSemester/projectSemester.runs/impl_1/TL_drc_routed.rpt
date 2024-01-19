@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 19 10:43:13 2024
+| Date         : Fri Jan 19 14:17:45 2024
 | Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command      : report_drc -file TL_drc_routed.rpt -pb TL_drc_routed.pb -rpx TL_drc_routed.rpx
 | Design       : TL
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 6
+             Violations found: 7
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
-| PDRC-153    | Warning  | Gated clock check                                           | 3          |
+| PDRC-153    | Warning  | Gated clock check                                           | 4          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
 | ZPS7-1      | Warning  | PS7 block required                                          | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -37,12 +37,12 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net comp3/FSM_sequential_current_state_s_reg[0]_0 is a gated clock net sourced by a combinational pin comp3/Q_o_i_1__7/O, cell comp3/Q_o_i_1__7. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net comp3/FSM_sequential_current_state_s_reg[1]_0 is a gated clock net sourced by a combinational pin comp3/Q_o_i_1__6/O, cell comp3/Q_o_i_1__6. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net comp3/clk_i1_out is a gated clock net sourced by a combinational pin comp3/Q_o_i_2/O, cell comp3/Q_o_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net comp3/clk_i0_out is a gated clock net sourced by a combinational pin comp3/Q_o_i_2/O, cell comp3/Q_o_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
@@ -50,9 +50,14 @@ Gated clock check
 Net comp3/enSIPO_s_reg_i_2_n_0 is a gated clock net sourced by a combinational pin comp3/enSIPO_s_reg_i_2/O, cell comp3/enSIPO_s_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
+PDRC-153#4 Warning
+Gated clock check  
+Net comp3/shift_s_reg_i_1_n_0 is a gated clock net sourced by a combinational pin comp3/shift_s_reg_i_1/O, cell comp3/shift_s_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT comp3/Q_o_i_1__7 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+A LUT comp3/Q_o_i_1__6 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
 comp1/SIPO[1].memory_reg/Q_o_reg, comp1/SIPO[2].memory_reg/Q_o_reg,
 comp1/SIPO[3].memory_reg/Q_o_reg, comp1/SIPO[4].memory_reg/Q_o_reg,
 comp1/SIPO[5].memory_reg/Q_o_reg, comp1/SIPO[6].memory_reg/Q_o_reg,

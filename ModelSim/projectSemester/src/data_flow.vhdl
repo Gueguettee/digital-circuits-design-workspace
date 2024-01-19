@@ -84,8 +84,7 @@ architecture mix of data_flow is
         output_logic: process(current_state_s)
         begin
             case current_state_s is
-                when IDLE =>
-                    shift_s <= '0';               
+                when IDLE =>             
                     enSIPO_s <= '0';
                     enPISO_s <= '0';
                 when RUNNING =>

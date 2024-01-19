@@ -50,9 +50,9 @@ architecture mix of TestBench_TL is
 
         rst : process
             begin
-                tb_rst_i <= '0';
-                wait for 105 ns;
                 tb_rst_i <= '1';
+                wait for 105 ns;
+                tb_rst_i <= '0';
                 wait;
         end process;
 
@@ -74,7 +74,7 @@ architecture mix of TestBench_TL is
         
         data_in : process(tb_clk_pll_o, tb_rst_i)
             begin
-                if tb_rst_i = '0' then
+                if tb_rst_i = '1' then
                     tb_sw_i <= (others=>'0');
                 elsif rising_edge(tb_clk_pll_o) then
                     if tb_en_i = '1' then

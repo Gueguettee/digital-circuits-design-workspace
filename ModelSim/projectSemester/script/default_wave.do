@@ -8,7 +8,7 @@ add wave sim:/TestBench_TL/tb_clk_pll_o
 add wave sim:/TestBench_TL/dut/comp3/current_state_s
 add wave sim:/TestBench_TL/dut/comp2/rst_i
 add wave sim:/TestBench_TL/dut/comp2/en_i
-add wave sim:/TestBench_TL/dut/comp2/shift_and_en_sn
+add wave sim:/TestBench_TL/dut/comp2/shift_and_en_ns
 add wave -radix unsigned sim:/TestBench_TL/tb_sw_i
 
 add wave -divider Output_Ports

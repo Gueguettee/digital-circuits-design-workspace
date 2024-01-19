@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 19 10:43:14 2024
+| Date         : Fri Jan 19 14:17:46 2024
 | Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TL_methodology_drc_routed.rpt -pb TL_methodology_drc_routed.pb -rpx TL_methodology_drc_routed.rpx
 | Design       : TL
@@ -29,8 +29,7 @@ Table of Contents
 +-----------+------------------+--------------------------------+------------+
 | TIMING-14 | Critical Warning | LUT on the clock tree          | 1          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell    | 8          |
-| TIMING-15 | Warning          | Large hold violation           | 1          |
-| TIMING-20 | Warning          | Non-clocked latch              | 1          |
+| TIMING-20 | Warning          | Non-clocked latch              | 2          |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
 +-----------+------------------+--------------------------------+------------+
 
@@ -81,19 +80,19 @@ Non-clocked sequential cell
 The clock pin comp1/SIPO[8].memory_reg/Q_o_reg/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-15#1 Warning
-Large hold violation  
-There is a large clock skew of 1.973 ns between comp3/FSM_sequential_current_state_s_reg[0]/C (clocked by clk_o_Int_PLL) and comp2/PISO[2].PISO_reg/Q_o_reg/D (clocked by clk_o_Int_PLL) that results in large hold timing violation(s) of -1.455 ns. Fixing large hold violations during routing might impact setup slack and result in more difficult timing closure
-Related violations: <none>
-
 TIMING-20#1 Warning
 Non-clocked latch  
 The latch comp3/enSIPO_s_reg cannot be properly analyzed as its control pin comp3/enSIPO_s_reg/G is not reached by a timing clock
 Related violations: <none>
 
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch comp3/shift_s_reg cannot be properly analyzed as its control pin comp3/shift_s_reg/G is not reached by a timing clock
+Related violations: <none>
+
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 2 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

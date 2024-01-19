@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 19 10:42:21 2024
+| Date         : Fri Jan 19 14:16:51 2024
 | Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TL_control_sets_placed.rpt
 | Design       : TL
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     5 |
-|    Minimum number of control sets                        |     5 |
+| Total control sets                                       |     6 |
+|    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    20 |
+| Unused register locations in slices containing registers |    27 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     5 |
-| >= 0 to < 4        |     2 |
+| Total control sets |     6 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     1 |
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | No                     |               3 |            3 |
 | No           | No                    | Yes                    |              58 |           17 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,10 +73,11 @@ Table of Contents
 +------------------------------------------------+---------------+---------------------------+------------------+----------------+--------------+
 |                  Clock Signal                  | Enable Signal |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------------------------------+---------------+---------------------------+------------------+----------------+--------------+
+|  comp3/shift_s_reg_i_1_n_0                     |               |                           |                1 |              1 |         1.00 |
 |  comp3/enSIPO_s_reg_i_2_n_0                    |               |                           |                1 |              1 |         1.00 |
 |  comp4/inst/clk_o                              |               |                           |                1 |              1 |         1.00 |
-|  comp3/FSM_sequential_current_state_s_reg[0]_0 |               | comp3/comp1/bbstub_locked |                3 |              8 |         2.67 |
-|  comp3/clk_i1_out                              |               | comp3/comp1/bbstub_locked |                5 |             16 |         3.20 |
+|  comp3/FSM_sequential_current_state_s_reg[1]_0 |               | comp3/comp1/bbstub_locked |                4 |              8 |         2.00 |
+|  comp3/clk_i0_out                              |               | comp3/comp1/bbstub_locked |                4 |             16 |         4.00 |
 |  comp4/inst/clk_o                              |               | comp3/comp1/bbstub_locked |                9 |             34 |         3.78 |
 +------------------------------------------------+---------------+---------------------------+------------------+----------------+--------------+
 

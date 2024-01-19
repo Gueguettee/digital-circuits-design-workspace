@@ -11,7 +11,7 @@ entity TL is
         sw_i : in std_logic_vector(8-1 downto 0);
         led_o : out std_logic_vector(8-1 downto 0);
         --ser_o : out std_logic;
-        ser_i : in std_logic
+        ser_i : in std_logic--;
         --clk_pll_o : out std_logic
 	);
 end entity TL;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 19 10:42:14 2024
+| Date         : Fri Jan 19 14:16:46 2024
 | Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command      : report_drc -file TL_drc_opted.rpt -pb TL_drc_opted.pb -rpx TL_drc_opted.rpx
 | Design       : TL
@@ -36,7 +36,7 @@ Table of Contents
 -----------------
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT comp3/Q_o_i_1__7 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+A LUT comp3/Q_o_i_1__6 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
 comp1/SIPO[1].memory_reg/Q_o_reg, comp1/SIPO[2].memory_reg/Q_o_reg,
 comp1/SIPO[3].memory_reg/Q_o_reg, comp1/SIPO[4].memory_reg/Q_o_reg,
 comp1/SIPO[5].memory_reg/Q_o_reg, comp1/SIPO[6].memory_reg/Q_o_reg,

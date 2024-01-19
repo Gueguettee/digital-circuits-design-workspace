@@ -24,7 +24,7 @@ architecture mix of cnt is
             if (rst_i = '0') then
                 cnt_s <= 0;
             elsif rising_edge(clk_i) then
-                if (cnt_s >= DATA_BUS_WIDTH_c) then
+                if (cnt_s + 1 >= DATA_BUS_WIDTH_c) then
                     cnt_finish_s <= '1';
                     cnt_s <= 0;
                 else

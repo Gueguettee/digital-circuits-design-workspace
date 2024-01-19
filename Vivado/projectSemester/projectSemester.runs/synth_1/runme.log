@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source TL.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 430.047 ; gain = 163.477
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 430.137 ; gain = 163.879
 Command: read_checkpoint -auto_incremental -incremental C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/utils_1/imports/synth_1/SIPO_shift_reg.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/utils_1/imports/synth_1/SIPO_shift_reg.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,9 +27,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15548
+INFO: [Synth 8-7075] Helper process launched with PID 8884
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1287.254 ; gain = 410.066
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1286.418 ; gain = 410.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'TL' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:19]
 INFO: [Synth 8-3491] module 'SIPO_shift_reg' declared at 'C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/SIPO_shift_reg.vhdl:6' bound to instance 'comp1' of component 'SIPO_shift_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:81]
@@ -80,23 +80,23 @@ INFO: [Synth 8-3491] module 'cnt' declared at 'C:/git/digital-circuits-desighs-w
 INFO: [Synth 8-638] synthesizing module 'cnt' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/cnt.vhdl:13]
 INFO: [Synth 8-256] done synthesizing module 'cnt' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/cnt.vhdl:13]
 INFO: [Synth 8-256] done synthesizing module 'data_flow' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:16]
-INFO: [Synth 8-3491] module 'Int_PLL' declared at 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-21044-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:6' bound to instance 'comp4' of component 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:114]
-INFO: [Synth 8-638] synthesizing module 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-21044-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'Int_PLL' declared at 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-29348-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:6' bound to instance 'comp4' of component 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:114]
+INFO: [Synth 8-638] synthesizing module 'Int_PLL' [C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/.Xil/Vivado-29348-LAPTOP-CJ972H0K/realtime/Int_PLL_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'TL' (0#1) [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/TL.vhdl:19]
 WARNING: [Synth 8-7129] Port ser_i in module TL is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1378.875 ; gain = 501.688
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1378.219 ; gain = 501.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1378.875 ; gain = 501.688
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1378.219 ; gain = 501.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1378.875 ; gain = 501.688
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1378.219 ; gain = 501.801
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1378.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1378.219 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -109,22 +109,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/TL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1478.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1462.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1478.801 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1462.578 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -133,9 +133,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_i. (constraint file  c:/git/d
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_i. (constraint file  c:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.gen/sources_1/ip/Int_PLL/Int_PLL/Int_PLL_in_context.xdc, line 5).
 Applied set_property KEEP_HIERARCHY = SOFT for comp4. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_s_reg' in module 'data_flow'
+WARNING: [Synth 8-327] inferring latch for variable 'shift_s_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:44]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -147,12 +148,14 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_s_reg' in mod
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_s_reg' using encoding 'sequential' in module 'data_flow'
 WARNING: [Synth 8-327] inferring latch for variable 'enSIPO_s_reg' [C:/git/digital-circuits-desighs-workspace/ModelSim/projectSemester/src/data_flow.vhdl:41]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
 +---Registers : 
 	                1 Bit    Registers := 49    
 +---Muxes : 
@@ -178,25 +181,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port ser_i in module TL is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:32 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -214,37 +217,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -262,40 +265,39 @@ Report Cell Usage:
 |      |Cell         |Count |
 +------+-------------+------+
 |1     |Int_PLL_bbox |     1|
-|2     |CARRY4       |    12|
+|2     |CARRY4       |    20|
 |3     |LUT1         |     2|
-|4     |LUT2         |    68|
+|4     |LUT2         |    70|
 |5     |LUT3         |     2|
-|6     |LUT4         |     3|
-|7     |LUT5         |     7|
-|8     |FDCE         |    58|
-|9     |FDRE         |     1|
-|10    |LD           |     1|
-|11    |IBUF         |    10|
-|12    |OBUF         |     8|
+|6     |LUT4         |     9|
+|7     |FDCE         |    58|
+|8     |FDRE         |     1|
+|9     |LD           |     2|
+|10    |IBUF         |    10|
+|11    |OBUF         |     8|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1478.801 ; gain = 501.688
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1478.801 ; gain = 601.613
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 1462.578 ; gain = 501.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1462.578 ; gain = 586.160
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1478.801 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1462.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1478.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1462.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  LD => LDCE: 1 instance 
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
-Synth Design complete | Checksum: a93c9cd
+Synth Design complete | Checksum: e5b9b96f
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 1478.801 ; gain = 1010.324
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1462.578 ; gain = 994.414
 INFO: [Common 17-1381] The checkpoint 'C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.runs/synth_1/TL.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TL_utilization_synth.rpt -pb TL_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 19 10:41:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 19 14:15:49 2024...
