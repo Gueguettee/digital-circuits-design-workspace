@@ -34,7 +34,7 @@ architecture mix of SIPO_shift_reg is
 	signal shift_and_en_s : std_logic;
 
 	begin
-		clk_and_en_ns <= not (clk_i and en_i);
+		clk_and_en_ns <= (clk_i and en_i);
 		shift_and_en_s <= (shift_i and en_i);
 		SIPO_data_s(0) <= data_i;
 		

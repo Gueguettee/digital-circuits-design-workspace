@@ -1,4 +1,4 @@
-# Author: Lorenzo Pirrami
+# Author: Gaëtan Jenni
 # File Name: sim_script.tcl
 # Description: This script compiles the design, then starts the
 # simulation and formats the wave window.
@@ -47,6 +47,7 @@ namespace eval sim_script {
 		data_flow.vhdl \
 		TestBench_TL.vhdl \
 		Int_PLL.vhdl \
+		cnt.vhdl \
 		my_pkg.vhdl \
 	]
 	# -------------------------------------------------------------------------------- 
