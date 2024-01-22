@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 19 14:17:46 2024
+| Date         : Mon Jan 22 09:27:33 2024
 | Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TL_methodology_drc_routed.rpt -pb TL_methodology_drc_routed.pb -rpx TL_methodology_drc_routed.rpx
 | Design       : TL
@@ -23,21 +23,24 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 12
-+-----------+------------------+--------------------------------+------------+
-| Rule      | Severity         | Description                    | Violations |
-+-----------+------------------+--------------------------------+------------+
-| TIMING-14 | Critical Warning | LUT on the clock tree          | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 8          |
-| TIMING-20 | Warning          | Non-clocked latch              | 2          |
-| LATCH-1   | Advisory         | Existing latches in the design | 1          |
-+-----------+------------------+--------------------------------+------------+
+             Violations found: 10
++-----------+------------------+-----------------------------+------------+
+| Rule      | Severity         | Description                 | Violations |
++-----------+------------------+-----------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree       | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 8          |
++-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-14#1 Critical Warning
 LUT on the clock tree  
-The LUT comp3/Q_o_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT comp1/SIPO[8].SIPO_reg/Q_o_i_1__8 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT shift_s_i_3 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -78,21 +81,6 @@ Related violations: <none>
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
 The clock pin comp1/SIPO[8].memory_reg/Q_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch comp3/enSIPO_s_reg cannot be properly analyzed as its control pin comp3/enSIPO_s_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch comp3/shift_s_reg cannot be properly analyzed as its control pin comp3/shift_s_reg/G is not reached by a timing clock
-Related violations: <none>
-
-LATCH-1#1 Advisory
-Existing latches in the design  
-There are 2 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

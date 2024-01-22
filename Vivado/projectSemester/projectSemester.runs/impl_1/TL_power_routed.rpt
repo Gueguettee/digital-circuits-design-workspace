@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Fri Jan 19 14:17:47 2024
+| Date             : Mon Jan 22 09:27:34 2024
 | Host             : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
 | Command          : report_power -file TL_power_routed.rpt -pb TL_power_summary_routed.pb -rpx TL_power_routed.rpx
 | Design           : TL
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.202        |
+| Total On-Chip Power (W)  | 0.204        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.095        |
+| Dynamic (W)              | 0.097        |
 | Device Static (W)        | 0.107        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.7         |
-| Junction Temperature (C) | 27.3         |
+| Max Ambient (C)          | 82.6         |
+| Junction Temperature (C) | 27.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      194 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       60 |     53200 |            0.11 |
+| Slice Logic    |    <0.001 |      182 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       58 |     53200 |            0.11 |
 |   CARRY4       |    <0.001 |       20 |     13300 |            0.15 |
-|   Register     |    <0.001 |       61 |    106400 |            0.06 |
-|   Others       |     0.000 |       31 |       --- |             --- |
-| Signals        |    <0.001 |      127 |       --- |             --- |
+|   Register     |    <0.001 |       57 |    106400 |            0.05 |
+|   Others       |     0.000 |       28 |       --- |             --- |
+| Signals        |    <0.001 |      120 |       --- |             --- |
 | PLL            |     0.095 |        1 |         4 |           25.00 |
-| I/O            |    <0.001 |       19 |       200 |            9.50 |
+| I/O            |     0.002 |       19 |       200 |            9.50 |
 | Static Power   |     0.107 |          |           |                 |
-| Total          |     0.202 |          |           |                 |
+| Total          |     0.204 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -150,7 +150,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| TL       |     0.095 |
+| TL       |     0.097 |
 |   comp4  |     0.095 |
 |     inst |     0.095 |
 +----------+-----------+

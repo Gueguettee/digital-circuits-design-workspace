@@ -55,29 +55,31 @@ architecture mix of data_flow is
         begin
             if (rst_i = '0') then
                 current_state_s <= RESET;
-            elsif rising_edge(clk_i) then
-                case current_state_s is
-                    when IDLE =>
-                        if (en_i = '1') then
-                            current_state_s <= RUNNING;
-                        end if;
-                    when RUNNING =>
-                        if (en_i = '0') then
-                            current_state_s <= IDLE;
-                        elsif (cnt_s = '1') then
-                            current_state_s <= SHIFT;
-                        end if;
-                    when SHIFT =>
-                        if (en_i = '0') then
-                            current_state_s <= IDLE;
-                        else
-                            current_state_s <= RUNNING;
-                        end if;
-                    when RESET =>
-                        if (rst_i = '1') then
-                            current_state_s <= RUNNING;
-                        end if;
-                end case;
+            else
+                if rising_edge(clk_i) then
+                    case current_state_s is
+                        when IDLE =>
+                            if (en_i = '1') then
+                                current_state_s <= RUNNING;
+                            end if;
+                        when RUNNING =>
+                            if (en_i = '0') then
+                                current_state_s <= IDLE;
+                            elsif (cnt_s = '1') then
+                                current_state_s <= SHIFT;
+                            end if;
+                        when SHIFT =>
+                            if (en_i = '0') then
+                                current_state_s <= IDLE;
+                            else
+                                current_state_s <= RUNNING;
+                            end if;
+                        when RESET =>
+                            if (rst_i = '1') then
+                                current_state_s <= RUNNING;
+                            end if;
+                    end case;
+                end if;
             end if;
         end process;
 
