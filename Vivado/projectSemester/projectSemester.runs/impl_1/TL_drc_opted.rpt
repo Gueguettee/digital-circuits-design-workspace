@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Jan 22 09:26:44 2024
-| Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Feb 20 20:51:34 2024
+| Host         : DESKTOP-FDL4QU3 running 64-bit major release  (build 9200)
 | Command      : report_drc -file TL_drc_opted.rpt -pb TL_drc_opted.pb -rpx TL_drc_opted.rpx
 | Design       : TL
 | Device       : xc7z020clg484-1
@@ -36,20 +36,24 @@ Table of Contents
 -----------------
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT comp1/SIPO[8].SIPO_reg/Q_o_i_1__8 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
-comp1/SIPO[1].SIPO_reg/Q_o_reg, comp1/SIPO[2].SIPO_reg/Q_o_reg,
-comp1/SIPO[3].SIPO_reg/Q_o_reg, comp1/SIPO[4].SIPO_reg/Q_o_reg,
-comp1/SIPO[5].SIPO_reg/Q_o_reg, comp1/SIPO[6].SIPO_reg/Q_o_reg,
-comp1/SIPO[7].SIPO_reg/Q_o_reg, comp1/SIPO[8].SIPO_reg/Q_o_reg
-Related violations: <none>
-
-PLHOLDVIO-2#2 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT comp3/Q_o_i_1__7 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+A LUT comp3/Q_o_i_1__6 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
 comp1/SIPO[1].memory_reg/Q_o_reg, comp1/SIPO[2].memory_reg/Q_o_reg,
 comp1/SIPO[3].memory_reg/Q_o_reg, comp1/SIPO[4].memory_reg/Q_o_reg,
 comp1/SIPO[5].memory_reg/Q_o_reg, comp1/SIPO[6].memory_reg/Q_o_reg,
 comp1/SIPO[7].memory_reg/Q_o_reg, comp1/SIPO[8].memory_reg/Q_o_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT comp3/Q_o_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+comp1/SIPO[1].SIPO_reg/Q_o_reg, comp1/SIPO[2].SIPO_reg/Q_o_reg,
+comp1/SIPO[3].SIPO_reg/Q_o_reg, comp1/SIPO[4].SIPO_reg/Q_o_reg,
+comp1/SIPO[5].SIPO_reg/Q_o_reg, comp1/SIPO[6].SIPO_reg/Q_o_reg,
+comp1/SIPO[7].SIPO_reg/Q_o_reg, comp1/SIPO[8].SIPO_reg/Q_o_reg,
+comp2/PISO[0].PISO_reg/Q_o_reg, comp2/PISO[1].PISO_reg/Q_o_reg,
+comp2/PISO[2].PISO_reg/Q_o_reg, comp2/PISO[3].PISO_reg/Q_o_reg,
+comp2/PISO[4].PISO_reg/Q_o_reg, comp2/PISO[5].PISO_reg/Q_o_reg,
+comp2/PISO[6].PISO_reg/Q_o_reg (the first 15 of 16 listed)
 Related violations: <none>
 
 ZPS7-1#1 Warning

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/git/digital-circuits-desighs-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc rfile:../../../projectSemester.srcs/pin_constr/new/pin.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/git/digital-circuits-design-workspace/Vivado/projectSemester/projectSemester.srcs/pin_constr/new/pin.xdc rfile:../../../projectSemester.srcs/pin_constr/new/pin.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC F22 [get_ports sw_i[0]]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

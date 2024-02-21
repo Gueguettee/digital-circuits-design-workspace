@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Jan 22 09:27:34 2024
-| Host         : LAPTOP-CJ972H0K running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Feb 20 20:52:12 2024
+| Host         : DESKTOP-FDL4QU3 running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file TL_bus_skew_routed.rpt -pb TL_bus_skew_routed.pb -rpx TL_bus_skew_routed.rpx
 | Design       : TL
 | Device       : 7z020-clg484
