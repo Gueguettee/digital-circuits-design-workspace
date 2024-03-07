@@ -4,12 +4,13 @@ use ieee.std_logic_1164.all;
 
 entity data_flow is
     port(
-        en_i: in std_logic;
-        rst_i: in std_logic;
-        clk_i: in std_logic;
-        shift_o: out std_logic;
-        enSIPO_o: out std_logic;
-        enPISO_o: out std_logic
+        en_i     : in std_logic;
+        rst_i    : in std_logic;
+        clk_i    : in std_logic;
+        
+        shift_o  : out std_logic;
+        enSIPO_o : out std_logic;
+        enPISO_o : out std_logic
     );
 end entity;
 
