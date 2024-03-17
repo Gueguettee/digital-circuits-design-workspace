@@ -13,7 +13,7 @@ end entity DFF;
 
 architecture mix of DFF is
 	begin
-		process (rst_i, clk_i)	-- to not do all in the same time
+		process (rst_i, clk_i)
 			begin
 				if rst_i = '0' then
 					Q_o <= '0';
